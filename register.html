@@ -1,0 +1,111 @@
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Styles Conference</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+	
+	<header class="primary-header container group">
+		<h1 class="logo">
+			<a href="index1.html">Конференция <br> IT-специалистов</a>
+		</h1>
+			
+		<h3 class="tagline">24&#8211;26 августа &#8212; Пермь, Пермский край</h3>
+			
+		<!.. Навигация ..!>
+		<nav class="nav primary-nav">
+			<ul>
+				<li><a href="index1.html">Главная</a></li>
+				<li><a href="speakers.html">Спикеры</a></li>
+				<li><a href="schedule.html">Расписание</a></li>
+				<li><a href="venue.html">Место проведения</a></li>
+				<li><a href="register.html">Регистрация</a></li>
+			</ul>	
+		</nav>
+		<!.. Конец навигации ..!>
+	</header>
+	
+	<section class="row-alt">
+		<div class="lead container">
+			<h1> Регистрация </h1>
+			<p>Каждый год мы стремимся невероятно провести время и в этом году мы хотели бы, чтобы 
+			   вы присоединились к нам. Вход на конференцию стоит всего лишь 1990 рублей и это лучшая
+			   цена, которую можно найти.</p>
+		</div>
+	</section>
+	
+	<section class="row">
+		<div class="grid">
+			<section class="col-2-3">
+				<h2>Закажи билет на конференцию</h2>
+				<h5>1990 рублей за билет</h5>
+				
+				<p>Приобретите билет на нашем сайте, используя форму справа. 
+				   Можно приобрести сразу несколько билетов, так что не стесняйтесь взять 
+				   с собой друга или двух. После того, как ваш заказ будет готов, мы 
+				   свяжемся с вами и предоставим квитанцию за покупку. Скоро увидимся!</p>
+				   
+				<h4>Почему нужно участвовать?</h4>
+				
+				<ul class="why-attend">
+					<li>Более двадцати спикеров мирового класса</li>
+					<li>Один полный день мастер-классов и два полных дня презентаций</li>
+					<li>Состоится в Театре-Театре, исторической достопримечательности</li>
+					<li>Август в Перми просто поражает своими закатами</li>
+				</ul>
+			</section><!--
+			--><form class="col-1-3" action="#" method="post">
+				<fieldset class="register">
+					
+					<label>
+						Имя
+						<input type="text" name="name" placeholder="Полное имя" required>
+					</label>
+					
+					<label>
+						Email
+						<input type="email" name="email" placeholder="Почтовый адрес" required>
+					</label>
+					
+					<label>
+						Число билетов
+						<select name="quantity" required>
+						<option value="1" selected>1</option>
+						<option value="2" selected>2</option>
+						<option value="3" selected>3</option>
+						<option value="4" selected>4</option>
+						<option value="5" selected>5</option>
+					</label>
+					
+					<label>
+						Комментарии
+						<textarea name="comments"></textarea>
+					</label>
+					
+				</fieldset>	
+				
+				<input class="btn btn-default" type="submit" name="submit" value="Заказать">
+				
+			   </form>
+		</div>
+	</section>
+	
+	<footer class="primary-footer container group">
+		<small>&copy; Все права защищены. </small>
+				
+				<!-- Навигация -->
+		<nav class="nav">
+			<a href="index1.html">Главная</a>
+			<a href="speakers.html">Спикеры</a>
+			<a href="schedule.html">Расписание</a>
+			<a href="venue.html">Место проведения</a>
+			<a href="register.html">Регистрация</a>
+		</nav>
+				<!-- Конец навигации -->	
+	</footer>
+</body>
+</html>

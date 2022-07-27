@@ -1,0 +1,664 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 
+=============================================
+Начало CSS 
+=============================================
+*/
+
+/*
+  ========================================
+  Сетка
+  ========================================
+*/
+
+/* box-sizing: border-box оптимальный вариант, чтобы размер блочной модели не
+   изменялся из-за отступов в паддинге, марджине или бордере */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: 960px;
+}
+
+.grid,
+/* Определяем сетку для колонок */
+.col-1-3,
+.col-2-3 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.container,
+.grid {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.container {
+	/* Нужно поделиться правилами гриду от контейнера, чтобы паддинги не сложились */
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.col-1-3,
+.col-2-3 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col-1-3 {
+	width: 33%;
+}
+
+.col-2-3 {
+	width: 66.66%;
+}
+
+/* =============================================
+	Типографика (отступы между строчками) 
+   =============================================
+*/
+
+h1,
+h3,
+h4,
+h5,
+p {
+	margin-bottom: 22px;
+	color: #648880;
+}
+
+/* Кнопка со скруглением */
+
+.btn {
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+/* Стиль рамки для кнопки */
+
+.btn-alt {
+	border: 1px solid #fff;
+	padding: 10px 30px;
+}
+
+.btn-alt:hover {
+	background: #fff;
+	color: #648880;
+}
+
+/*
+  ========================================
+  Главная страница
+  ========================================
+*/
+
+.hero {
+	padding: 22px 40px 38px 80px;
+	line-height: 44px;
+	text-align: center;
+	color: #648880;
+}
+
+.hero h2 {
+	font-size: 36px;
+}
+
+.hero p {
+	font-size: 24px;
+	font-weight: 100;
+	color: #fff;
+}
+
+/* =============================================
+					Clearfix 
+   =============================================*/
+/* ::before и афтер - это псевдоэлементы */
+.group:before,
+/* Описываем класс group, который будет играть роль контейнера */
+.group:after {
+	content: "";
+	/* Перед каждым классом .group будет написан пустой текст. Само content - это свойство
+	если ваш контент пуст, свойство display — или псевдо-элемент не будет отображаться
+	Такая структура используется, если интересует  чисто графика*/
+	display: table;
+}
+
+/* Задаем table для дисплея, так как обтекаемый элемент float выбивается с потока, а для 
+	   позиционирования нам нужно с линейного типа текста перевести в табличный */
+.group:after {
+	clear: both;
+}
+
+.group {
+	clear: both;
+}
+
+/* =============================================
+				Основной подвал
+   =============================================*/
+
+.primary-footer {
+	padding-bottom: 22px;
+	padding-top: 22px;
+	color: #648880;
+	font-size: 14px;
+}
+
+.primary-footer small {
+	float: left;
+	float-weight: 400;
+}
+
+/* =============================================
+		Пользовательские стили шрифта
+   ============================================= */
+
+body {
+	color: #888;
+	font: 300
+		/* жирность (100-900) */
+		16px/22px
+		/* Размер шрифта / Межстрочный интервал */
+		"Roboto",
+		"Open Sans",
+		/* Предпочитаемый шрифт */
+		"Helvetica Neue", Helvetica, Arial sans-serif;
+	/* Наименее предпочтительный шрифт, используется, если другие недоступны */
+	background: #293f55;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 44px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 44px;
+}
+
+h3 {
+	font-size: 21px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: 400;
+	color: #a9b2b9;
+	text-transform: uppercase;
+}
+
+strong {
+	font-weight: 400;
+}
+
+cite,
+em {
+	font-style: italic;
+}
+
+/* =============================================
+					Ссылки
+   ============================================= */
+
+a:hover {
+	/* Псевдоэлемент hover для того, чтобы менялся стиль при наведении курсора */
+	color: #a9b2b9;
+}
+
+a {
+	color: #648880;
+	text-decoration: none;
+}
+
+p a {
+	border-bottom: 1px solid #dfe2e5;
+}
+
+/* Логотип */
+.logo {
+	border-top: 4px solid #648880;
+	float: left;
+	font-size: 40px;
+	line-height: 46px;
+	padding: 40px 0 22px 0;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.tagline {
+	margin: 66px 0 22px 0;
+	text-align: right;
+}
+
+/* Логотип */
+
+.primary-nav {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+/* Селектор, в котором мы нацеливаемся только на элементы внутри элемента с классом teaser */
+.teaser a:hover h3 {
+	color: #a9b2b9;
+}
+
+/* =============================================
+					Навигация
+   ============================================= */
+
+.nav {
+	text-align: right;
+}
+
+.nav li {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+
+/* =============================================
+					Цвет фона
+   ============================================= */
+
+.primary-header a,
+.primary-footer a {
+	color: #fff;
+}
+
+.primary-header a:hover,
+.primary-footer a:hover {
+	color: #648880;
+}
+
+/* Полосы */
+
+.row {
+	background: #fff;
+	padding: 66px 0 44px 0;
+}
+
+.row,
+.row-alt {
+	min-width: 960px;
+}
+
+.row-alt {
+	/* Градиент для вторичных страниц */
+	background: #cbe2c1;
+	background: -webkit-linear-gradient(to right, #e3c4a6, #ebdcd3);
+	background: -moz-linear-gradient(to right, #e3c4a6, #ebdcd3);
+	background: linear-gradient(to right, #e3c4a6, #ebdcd3);
+	padding: 44px 0 44px 0;
+}
+
+.lead {
+	text-align: center;
+}
+
+.lead p {
+	font-size: 21px;
+	line-height: 33px;
+}
+
+/*
+  ========================================
+				СПИКЕРЫ
+  ========================================
+*/
+
+
+.speaker-info {
+	/* Рамка */
+	border: 1px solid #dfe2e5;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 88px;
+	padding-bottom: 22px;
+}
+
+.speaker {
+	/* Отступ снизу, чтобы разные спикеры были на одинаковом расстоянии */
+	margin-bottom: 44px;
+}
+
+/*
+  ========================================
+				Картинки
+  ========================================
+*/
+/* Главная страница */
+.teaser img {
+	border-radius: 5px;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 22px;
+	height: 183px;
+}
+
+/* Страница спикеры */
+
+.speaker-info img {
+	border-radius: 50%;
+	height: 130px;
+	vertical-align: top;
+	margin: -66px 0 20px 0;
+}
+
+/*
+  ========================================
+				Место проведения
+  ========================================
+*/
+
+.theatre {
+	margin-bottom: 66px;
+}
+
+.hotel {
+	margin-bottom: 22px;
+}
+
+.map {
+	height: 200px;
+}
+
+/*
+  ========================================
+				Регистрация
+  ========================================
+*/
+
+.why-attend {
+	list-style: square;
+	margin: 0 0 22px 30px;
+}
+
+form {
+	margin-bottom: 22px;
+}
+
+input,
+select,
+textarea {
+	font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	resize: vertical;
+}
+
+.register label {
+	color: #648880;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.register input,
+.register select,
+.register textarea {
+	border: 1px solid #c6c9cc;
+	border-radius: 5px;
+	color: #888;
+	display: block;
+	margin: 5px 0 20px 0;
+	padding: 3px 8px;
+}
+
+.register input,
+.register textarea {
+	width: 100%;
+}
+
+.register select {
+	height: 30px;
+	width: 50px;
+	text-align: center;
+}
+
+.register textarea {
+	height: 80px;
+}
+
+.btn-default {
+	border: 0;
+	background: #648880;
+	padding: 11px 30px;
+	font-size: 14px;
+}
+
+.btn-default:hover {
+	background: #77a198;
+}
+
+/*
+  ========================================
+				Расписание
+  ========================================
+*/
+
+table {
+	margin-bottom: 44px;
+	width: 100%;
+}
+
+table:last-child {
+	margin-bottom: 0;
+}
+
+th,
+td {
+	padding-bottom: 21px;
+}
+
+th {
+	padding-right: 45px;
+	text-align: right;
+	width: 20%;
+}
+
+td {
+	width: 40%;
+}
+
+thead {
+	line-height: 30px;
+}
+
+thead th {
+	color: #648880;
+	font-size: 24px;
+}
+
+tbody th {
+	color: #a9b2b9;
+	font-size: 14px;
+	font-weight: 400;
+	padding-top: 22px;
+	text-transform: uppercase;
+}
+
+tbody td {
+	border-top: 1px solid #dfe2e5;
+	padding-top: 22px;
+}
+
+tbody td:first-of-type {
+	padding-right: 15px;
+}
+
+tbody td:last-of-type {
+	padding-left: 15px;
+}
+
+tbody td:only-of-type {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+table a {
+	color: #666;
+}
+
+table h4 {
+	margin-bottom: 0;
+}
+
+.schedule-offset {
+	color: #a9b2b9;
+}
